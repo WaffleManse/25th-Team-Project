@@ -7,10 +7,13 @@ public class CameraFollow : MonoBehaviour
 
     public Transform target;
 
+
+      // 바닥 오브젝트
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -27,5 +30,7 @@ public class CameraFollow : MonoBehaviour
 
         Vector3 followPos = new Vector3((Pos.x), (Pos.y), (Pos.z = -10));
         transform.position = followPos;
+
+
     }
 }
