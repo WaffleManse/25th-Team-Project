@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
 
     void jump()
     {
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (!IsJump)
@@ -52,6 +53,7 @@ public class Player : MonoBehaviour
                 JumpCount--;
             }
         }
+
 
     }
 
