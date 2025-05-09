@@ -10,7 +10,7 @@ public class CameraFollow : MonoBehaviour
 
       // 바닥 오브젝트
 
-    // Start is called before the first frame update
+    
     void Start()
     {
 
