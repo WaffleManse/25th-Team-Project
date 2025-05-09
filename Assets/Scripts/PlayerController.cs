@@ -11,10 +11,11 @@ public class Player : MonoBehaviour
 
 
 
-    private Vector2 moveVelocity; // 이동 방향 벡터
+    private Vector3 moveVelocity; // 이동 방향 벡터
 
 
-    public float Jump = 5f; // 점프 힘 
+    public float JumpPower = 7f; // 점프 힘
+    public float jump; // 점프 선언 
 
     public bool IsJump = false; // 점프 t/f 확인
 
@@ -26,12 +27,10 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
     }
 
-
-
     private void Update()
     {
-        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")); // 입력 값 가져오기
-        transform.position += new Vector3(1f, 0, 0);
+        Vector3 moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")); // 입력 값 가져오기
+        transform.position += new Vector3(0.7f, 0, 0);
         Jump();
 
 
@@ -39,7 +38,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        moveVelocity = new Vector2(moveVelocity.x, moveVelocity.y); // 수평 이동 처리
+        moveVelocity = new Vector3(moveVelocity.x, moveVelocity.y); // 수평 이동 처리
     }
 
     void Jump()
@@ -48,15 +47,15 @@ public class Player : MonoBehaviour
         {
             if (!IsJump)
             {
-                IsJump = true;
-                rigid.AddForce(Vector2.up * Jump, ForceMode2D.Impulse);
+                IsJump = false;
+                rigid.AddForce(Vector3.up * jump, ForceMode2D.Impulse);
             }
         }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.name.Equals("Player"))
+        if (other.gameObject.name.Equals("Ground"))
         {
             IsJump = false;
         }
