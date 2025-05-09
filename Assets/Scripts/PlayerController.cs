@@ -31,8 +31,8 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); // 입력 값 가져오기
-        moveVelocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); // 이동 방향 벡터 설정
+        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")); // 입력 값 가져오기
+        transform.position += new Vector3(1f,0,0);
         
 
     }
