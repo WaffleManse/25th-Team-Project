@@ -1756,7 +1756,9 @@ MonoBehaviour:
   rigid: {fileID: 0}
   Speed: 3
   JumpPower: 5
-  jump: 5
+  JumpCount: 2
+  MaxJumpCount: 2
+  Jump: 0
   IsJump: 1
   GodMode: 0
   IsDead: 0

@@ -5,21 +5,16 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rigid; // rigidbody2d 컴포넌트 선언
-
-
-    public float Speed; // 이동 속도
-
-
-
     private Vector3 moveVelocity; // 이동 방향 벡터
 
-
+    public float Speed; // 이동 속도
     public float JumpPower = 7f; // 점프 힘
     public float JumpCount = 2; // 점프 횟수 카운트
+    public float MaxJumpCount = 2; // 최대 점프 횟수 카운트
     public float Jump; // 점프 선언
-    public bool IsJump = false; // 점프 t/f 확인
 
-    public bool GodMode = false; // 신 모드
+    public bool IsJump = false; // 점프 t/f 확인
+    public bool GodMode = false; // 신 모드 - QA 편의성 증가 목적
     public bool IsDead = false; // 죽음 상태
 
     private void Awake()
@@ -51,25 +46,26 @@ public class Player : MonoBehaviour
                 rigid.AddForce(Vector3.up * Jump, ForceMode2D.Impulse);
             }
 
-            if (JumpCount >= 0)
+            if (JumpCount > 0)
             {
                 rigid.velocity = Vector2.up * JumpPower;
                 JumpCount--;
-                return;
             }
-
         }
 
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    public void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.name.Equals("Ground"))
         {
             IsJump = false;
         }
-    }
 
-  
+        if (JumpCount == 0)
+        {
+            JumpCount += MaxJumpCount;
+        }
+    }
 
 }
