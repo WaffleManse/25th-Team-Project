@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BgLooper : MonoBehaviour
@@ -24,7 +25,9 @@ public class BgLooper : MonoBehaviour
 
         if (collision.CompareTag("Background"))
         {
-            float widthOfBgObject = ((BoxCollider2D)collision).size.x;
+            float widthOfBgObject = ((BoxCollider2D)collision).size.x;//스케일 값이 적용 안된 콜라이더 넓이.(스케일 x는 1.7)
+            //widthOfBgObject = widthOfBgObject + widthOfBgObject * 0.7f;
+            
             Vector3 pos = collision.transform.position;
 
             pos.x += (widthOfBgObject * numBg);
