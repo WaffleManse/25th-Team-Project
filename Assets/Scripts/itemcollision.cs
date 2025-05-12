@@ -11,6 +11,9 @@ using UnityEngine;
 public class itemcollision : MonoBehaviour
 {
     private BoxCollider2D bc;
+    private DataCenter dataCenter;
+
+    public ScoreCount scoreCount; // 스코어를 저장하는 장소
 
     void Start()
     {
@@ -24,6 +27,7 @@ public class itemcollision : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Debug.Log("플레이어가 아이템 획득");
+            scoreCount.AddScore(dataCenter.Jelly);
             Destroy(gameObject);
 
         }
@@ -35,3 +39,12 @@ public class itemcollision : MonoBehaviour
     private int life = 0;
     public int Life { get { return Life; } }
 }
+
+
+#region
+/*
+
+
+ 
+*/
+#endregion
