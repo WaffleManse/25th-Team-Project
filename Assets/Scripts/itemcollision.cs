@@ -18,6 +18,14 @@ public class itemcollision : MonoBehaviour
     void Start()
     {
         bc = GetComponent<BoxCollider2D>();
+        if (scoreCount != null)
+        {
+            dataCenter = scoreCount.GetDataCenter();
+        }
+        else
+        {
+            Debug.LogError("ScoreCount가 연결되지 않았습니다!");
+        }
     }
 
    
