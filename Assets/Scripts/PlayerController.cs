@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     private Vector3 moveVelocity; // 이동 방향 벡터
 
     public float Speed; // 이동 속도
-    public float JumpPower = 7f; // 점프 힘
+    public float JumpPower = 2f; // 점프 힘
     public float JumpCount = 2; // 점프 횟수 카운트
     public float MaxJumpCount = 2; // 최대 점프 횟수 카운트
     public float Jump; // 점프 선언
