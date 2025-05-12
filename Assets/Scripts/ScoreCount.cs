@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ScoreCount : MonoBehaviour
 {
+    [SerializeField]
+    private DataCenter dataCenter;
     public int score = 0; // 점수 변수선언
     public Text scoreText; // 점수표시 txt
     
