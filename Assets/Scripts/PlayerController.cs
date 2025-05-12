@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     Animator animator; // 애니메이터 선언 
 
     public float Speed; // 이동 속도
-    public float JumpPower = 2f; // 점프 힘
+    public float JumpPower = 5f; // 점프 힘
     public float JumpCount = 2; // 점프 횟수 카운트
     public float MaxJumpCount = 2; // 최대 점프 횟수 카운트
     public float Jump; // 점프 선언
