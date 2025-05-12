@@ -15,14 +15,7 @@ public class Player : MonoBehaviour
     public float MaxJumpCount = 2; // 최대 점프 횟수 카운트
     public float Jump; // 점프 선언
 
-
-    private Rigidbody2D rb; 
-
-    private Vector2 moveVelocity; // 이동 방향 벡터
-
-
-    public float Jump = 5f; // 점프 힘 
-
+    public bool IsJump = false; // 점프 t/f 확인
     public bool GodMode = false; // 신 모드
     public bool IsDead = false; // 죽음 상태
 
@@ -39,27 +32,19 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+
         Vector3 moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")); // 입력 값 가져오기
         transform.position += new Vector3(0.7f, 0, 0);
         jump();
     }
 
-
-
-    private void Start()
+    void jump()
     {
-        rb = GetComponent<Rigidbody2D>(); // rigidbody2d 컴포넌트 가져오기
-    }
-
-    private void Update()
-    {
-
-        // 스페이스 입력시 점프가 나가는 코드
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (!IsJump)
             {
-                IsJump = false;
+                IsJump = true;
                 rigid.AddForce(Vector3.up * Jump, ForceMode2D.Impulse);
             }
 
@@ -69,15 +54,15 @@ public class Player : MonoBehaviour
                 JumpCount--;
             }
         }
-
-
-
     }
 
     private void FixedUpdate()
     {
+        moveVelocity = new Vector3(moveVelocity.x, moveVelocity.y); // 수평 이동 처리
+    }
 
-        // 땅과 충돌시 점프 카운트가 줄어드는 코드
+    public void OnCollisionEnter2D(Collision2D other)
+    {
         if (other.gameObject.name.Equals("Ground"))
         {
             IsJump = false;
@@ -87,8 +72,9 @@ public class Player : MonoBehaviour
         {
             JumpCount += MaxJumpCount;
         }
-
     }
+
+
     
 
     public void OnBoxCollider2D(Collision2D other)
