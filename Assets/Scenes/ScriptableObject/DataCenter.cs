@@ -34,6 +34,12 @@ public class DataCenter : ScriptableObject
     private int basicJumpHeight = 5;
     public int BasicJumpHeight { get { return basicJumpHeight; } }
 
+    //Á©¸® Á¡¼ö
+    [Header("Á©¸® Á¡¼ö")]
+    [Tooltip("")]
+    [SerializeField]
+    private int jelly  = 10;
+    public int Jelly  { get{ return jelly ; } }
 
 
 
@@ -70,6 +76,8 @@ public class DataCenter : ScriptableObject
     [SerializeField]
     private int obstacleSpawnInterval = 1;
     public int ObstacleSpawnInterval { get { return obstacleSpawnInterval; } }
+
+    
 
 }
 
