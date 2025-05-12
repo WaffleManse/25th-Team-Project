@@ -34,6 +34,13 @@ public class DataCenter : ScriptableObject
     private int basicJumpHeight = 5;
     public int BasicJumpHeight { get { return basicJumpHeight; } }
 
+    //플레이어 최대점프 횟수
+[Header("플레이어 최대점프 횟수")]
+    [Tooltip("")]
+    [SerializeField]
+    private int maxJumpCount =2 ;
+    public int MaxJumpCount { get{ return maxJumpCount; } }
+
     //젤리 점수
     [Header("젤리 점수")]
     [Tooltip("")]
