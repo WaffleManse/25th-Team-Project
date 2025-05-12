@@ -27,12 +27,10 @@ public class ScoreCount : MonoBehaviour
             scoreText.text = "현재 점수: " + score.ToString(); //테스트용 txt에 문자열로 변환
     }
 
-    
-    void Update()
+
+    public DataCenter GetDataCenter()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) //테스트용 스페이스바 누르면 점수오름
-        {
-            AddScore(10);
-        }
+        return dataCenter;
     }
+
 }
