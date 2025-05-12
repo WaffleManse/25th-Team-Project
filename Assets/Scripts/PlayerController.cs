@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
     [SerializeField] private Rigidbody2D rigid; // rigidbody2d 컴포넌트 선언
     private Vector3 moveVelocity; // 이동 방향 벡터
     Animator animator; // 애니메이터 선언 
@@ -14,9 +15,17 @@ public class Player : MonoBehaviour
     public float MaxJumpCount = 2; // 최대 점프 횟수 카운트
     public float Jump; // 점프 선언
 
-    public bool IsJump = false; // 점프 t/f 확인
-    public bool GodMode = false; // 신 모드 - QA 편의성 증가 목적
+
+    private Rigidbody2D rb; 
+
+    private Vector2 moveVelocity; // 이동 방향 벡터
+
+
+    public float Jump = 5f; // 점프 힘 
+
+    public bool GodMode = false; // 신 모드
     public bool IsDead = false; // 죽음 상태
+
 
     private void Start()
     {
@@ -35,13 +44,16 @@ public class Player : MonoBehaviour
         jump();
     }
 
-    private void FixedUpdate()
+
+
+    private void Start()
     {
-        moveVelocity = new Vector3(moveVelocity.x, moveVelocity.y); // 수평 이동 처리
+        rb = GetComponent<Rigidbody2D>(); // rigidbody2d 컴포넌트 가져오기
     }
 
-    void jump()
+    private void Update()
     {
+
         // 스페이스 입력시 점프가 나가는 코드
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -59,10 +71,12 @@ public class Player : MonoBehaviour
         }
 
 
+
     }
 
-    public void OnCollisionEnter2D(Collision2D other)
+    private void FixedUpdate()
     {
+
         // 땅과 충돌시 점프 카운트가 줄어드는 코드
         if (other.gameObject.name.Equals("Ground"))
         {
@@ -73,7 +87,9 @@ public class Player : MonoBehaviour
         {
             JumpCount += MaxJumpCount;
         }
+
     }
+    
 
     public void OnBoxCollider2D(Collision2D other)
     {

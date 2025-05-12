@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GPloop : MonoBehaviour
 {
-    public int numGRcount = 50;
+    public int numGRcount = 3;
 
     void Start()
     {
