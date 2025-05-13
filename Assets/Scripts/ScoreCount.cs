@@ -2,16 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ScoreCount : MonoBehaviour
 {
     [SerializeField]
     private DataCenter dataCenter;
     public int score = 0; // 점수 변수선언
-    public Text scoreText; // 점수표시 txt
-    
+    private int bestScore = 0;
+    public TMP_Text scoreText; // 점수표시 txt
+    public TMP_Text bestScoreText;
+
+    //private void Awake()
+    //{
+    //    PlayerPrefs.SetInt("BestScore", 0);
+
+    //}
+
     void Start()
     {
+
         UpdateScoreUI(); // 아마도 UI초기화
     }
 
