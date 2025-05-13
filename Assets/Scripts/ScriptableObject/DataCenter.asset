@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: DataCenter
   m_EditorClassIdentifier: 
   basicLife: 5
-  basicSpeed: 5
-  basicJumpHeight: 10
+  basicSpeed: 3
+  basicJumpHeight: 6
   maxJumpCount: 2
   jelly: 10
   obstacleDamage: 1

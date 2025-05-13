@@ -11,12 +11,12 @@ public class BgLooper : MonoBehaviour
 
     [Header("발판 설정")]
     public GameObject[] platformPrefabs; // 연결된 발판 이미지 프리팹 (4개)
-    public float platformSpeed = 7f; // 발판 이동 속도
+    public float platformSpeed = 3f; // 발판 이동 속도
     public Transform platformParent; // 발판 오브젝트들을 묶어둘 부모 Transform
 
     [Header("장애물 설정")]
     public GameObject[] obstaclePrefabs; // 장애물 이미지 프리팹 (2개)
-    public float obstacleSpawnInterval = 2f; // 장애물 생성 간격
+    public float obstacleSpawnInterval = 3f; // 장애물 생성 간격
     public float obstacleSpawnXPosition = 20f; // 장애물이 생성될 X 위치
     public Transform obstacleParent; // 장애물 오브젝트들을 묶어둘 부모 Transform
 
@@ -45,14 +45,14 @@ public class BgLooper : MonoBehaviour
 
     void InitializeBackground()
     {
-        if (backgroundPrefabs.Length != 4)
+        if (backgroundPrefabs.Length != 10)
         {
             Debug.LogError("배경 프리팹은 정확히 4개 연결해야 합니다.");
             return;
         }
 
         backgroundWidth = backgroundPrefabs[0].GetComponent<SpriteRenderer>().bounds.size.x;
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 10; i++)
         {
             GameObject bg = Instantiate(backgroundPrefabs[i], new Vector3(i * backgroundWidth, 0, 0), Quaternion.identity);
             activeBackgrounds.Add(bg);
@@ -76,7 +76,7 @@ public class BgLooper : MonoBehaviour
 
     void InitializePlatforms()
     {
-        if (platformPrefabs.Length != 4)
+        if (platformPrefabs.Length != 10)
         {
             Debug.LogError("발판 프리팹은 정확히 4개 연결해야 합니다.");
             return;
