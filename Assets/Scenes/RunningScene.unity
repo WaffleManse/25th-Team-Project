@@ -175,11 +175,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: CreateMap
       objectReference: {fileID: 0}
+    - target: {fileID: 8964450619204782699, guid: 2753bed67f38cc940b92eb76dc301e2a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2753bed67f38cc940b92eb76dc301e2a, type: 3}
+--- !u!1 &770164393 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4131936561316412606, guid: 02b2f533c9a7ef640ab38a6e9638ec02, type: 3}
+  m_PrefabInstance: {fileID: 838842392}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &770164397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770164393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d367f74b33d3b9d499c9a59719be2701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &838842392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -235,13 +256,45 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 449784350199485172, guid: 02b2f533c9a7ef640ab38a6e9638ec02, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1991711289}
+    - targetCorrespondingSourceObject: {fileID: 4131936561316412606, guid: 02b2f533c9a7ef640ab38a6e9638ec02, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 770164397}
   m_SourcePrefab: {fileID: 100100000, guid: 02b2f533c9a7ef640ab38a6e9638ec02, type: 3}
 --- !u!4 &1286922797 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1709579683676804911, guid: 02b2f533c9a7ef640ab38a6e9638ec02, type: 3}
   m_PrefabInstance: {fileID: 838842392}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1991711284 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 449784350199485172, guid: 02b2f533c9a7ef640ab38a6e9638ec02, type: 3}
+  m_PrefabInstance: {fileID: 838842392}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1991711289
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991711284}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 10d902a6fe5a6a24b80b9506b7d0ad47, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2079607681
 GameObject:
   m_ObjectHideFlags: 0
