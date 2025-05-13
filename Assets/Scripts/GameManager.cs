@@ -12,6 +12,6 @@ public class GameManager : MonoBehaviour
 
     public void Awake()
     {
-        Hp = hp + dataCenter.BasicLife; 
+        Hp = hp + dataCenter.BasicLife;     
     }
 }
