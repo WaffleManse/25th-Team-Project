@@ -41,6 +41,8 @@ public class Player : MonoBehaviour
         Vector3 moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")); // 입력 값 가져오기
         transform.position += new Vector3(Speed * Time.deltaTime, 0, 0); // Speed 적용
         jump();
+
+        
     }
 
     void jump()
@@ -58,7 +60,14 @@ public class Player : MonoBehaviour
                 rigid.velocity = Vector2.up * JumpPower;
                 JumpCount--;
             }
+
+            // Jump 애니메이션 체크 
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Jumping-single") == false)
+            {
+                animator.Play("Jumping-single", -1, 0);
+            }
         }
+
     }
 
     private void FixedUpdate()
