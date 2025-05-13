@@ -8,6 +8,7 @@ public class JellyItem : Itemcollision
     {
 
         scoreCount.AddScore(dataCenter.Jelly); //젤리 점수에서 받아온다.
+        Debug.Log("점수젤리좀 줘보셈");
 
     }
 
