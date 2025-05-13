@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd241d08437928a439fd539556a9e502, type: 3}
+  m_Name: MapSpawnData
+  m_EditorClassIdentifier: 
+  backgroundPrefabs:
+  - {fileID: 616693584010328611, guid: caaf3751a8044174c8a822faa272cbce, type: 3}
+  backgroundSpeed: 15.99
+  backgroundLoopCount: 10
+  platformPrefabs:
+  - {fileID: 3223529927314123297, guid: 2f7324340b44f68409104e5d4c06bd87, type: 3}
+  platformSpeed: 11.72
+  platformHeight: -3.5
+  platformLoopCount: 10
+  platformSpacing: 0
+  obstaclePrefabs:
+  - {fileID: 1448525776805694958, guid: 43888574a8294ea459d6b9c0752b05f4, type: 3}
+  - {fileID: 8452700871879202331, guid: fa646d85c6f2fc64da49bb192215dcd7, type: 3}
+  - {fileID: 1448525776805694958, guid: 23daf70ecb000c745a66550ccb398c0d, type: 3}
+  obstacleSpawnInterval: 2
+  obstacleSpawnXPosition: 20
+  obstacleMinY: -11
+  obstacleMaxY: 0
+  maxObstacleCount: 10
+  objectDestroyXPosition: -10
+  scrollDirection: {x: -1, y: 0, z: 0}
+  scaleMultiplier: 1
