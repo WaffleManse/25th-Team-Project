@@ -13,7 +13,7 @@ public class UI_Controller : MonoBehaviour
     public void Result()
     {
 
-        if (IsDead = true)
+        if (IsDead == true)
         {
             ResultUI.SetActive(true);
         }
