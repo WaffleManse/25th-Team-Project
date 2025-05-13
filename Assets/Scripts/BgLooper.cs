@@ -7,11 +7,11 @@ public class BgLooper : MonoBehaviour
 {
     [Header("배경 설정")]
     public GameObject[] backgroundPrefabs; // 연결된 배경 이미지 프리팹 (4개)
-    public float backgroundSpeed = 5f; // 배경 이동 속도
+    public float backgroundSpeed = 3f; // 배경 이동 속도
 
     [Header("발판 설정")]
     public GameObject[] platformPrefabs; // 연결된 발판 이미지 프리팹 (4개)
-    public float platformSpeed = 3f; // 발판 이동 속도
+    public float platformSpeed = 2f; // 발판 이동 속도
     public Transform platformParent; // 발판 오브젝트들을 묶어둘 부모 Transform
 
     [Header("장애물 설정")]
@@ -83,7 +83,7 @@ public class BgLooper : MonoBehaviour
         }
 
         platformWidth = platformPrefabs[0].GetComponent<SpriteRenderer>().bounds.size.x;
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 10; i++)
         {
             GameObject platform = Instantiate(platformPrefabs[i], new Vector3(i * platformWidth, -3.5f, 0), Quaternion.identity);
             if (platformParent != null)

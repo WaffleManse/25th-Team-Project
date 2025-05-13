@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 70
   m_Sprite: {fileID: 1130232178, guid: 450b001b04743b842b165842d31e75a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -129,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.75, y: 2.51}
+  m_Size: {x: 3.75, y: 5}
   m_EdgeRadius: 0
 --- !u!60 &-3005435079286843657
 PolygonCollider2D:

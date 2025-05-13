@@ -153,8 +153,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1990554543}
   - {fileID: 1191802132}
+  - {fileID: 1990554543}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &433325471
@@ -198,9 +198,7 @@ MonoBehaviour:
   - {fileID: 1448525776805694958, guid: 43888574a8294ea459d6b9c0752b05f4, type: 3}
   - {fileID: 8452700871879202331, guid: fa646d85c6f2fc64da49bb192215dcd7, type: 3}
   - {fileID: 8452700871879202331, guid: fa646d85c6f2fc64da49bb192215dcd7, type: 3}
-  - {fileID: 8452700871879202331, guid: fa646d85c6f2fc64da49bb192215dcd7, type: 3}
-  - {fileID: 8452700871879202331, guid: fa646d85c6f2fc64da49bb192215dcd7, type: 3}
-  obstacleSpawnInterval: 5
+  obstacleSpawnInterval: 3
   obstacleSpawnXPosition: 20
   obstacleParent: {fileID: 1990554543}
 --- !u!1 &1191802131
@@ -296,7 +294,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -458,6 +456,7 @@ GameObject:
   - component: {fileID: 1732974200}
   - component: {fileID: 1732974204}
   - component: {fileID: 1732974203}
+  - component: {fileID: 1732974205}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -570,6 +569,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &1732974205
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732974199}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 640049a0a4a62c047aaffbe73aee6c86, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1990554542
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,7 +614,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990554542}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
