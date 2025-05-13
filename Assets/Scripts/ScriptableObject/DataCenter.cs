@@ -15,7 +15,7 @@ public class DataCenter : ScriptableObject
 {
     //플레이어 기본 체력
     [Header("플레이어 기초 체력")]
-    [Tooltip("")]
+    [Tooltip("값을 수정하면 플레이어 기초 체력을 바꿉니다")]
     [SerializeField]
     private int basicLife = 5;
     public int BasicLife { get { return basicLife; } }
