@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   basicLife: 5
   basicSpeed: 5
-  basicJumpHeight: 5
+  basicJumpHeight: 10
   maxJumpCount: 2
   jelly: 10
   obstacleDamage: 1
