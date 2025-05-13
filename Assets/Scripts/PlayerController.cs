@@ -86,6 +86,7 @@ public class Player : MonoBehaviour
             IsJump = false;
         }
     }
+
 }
 
 #region 기존코드
