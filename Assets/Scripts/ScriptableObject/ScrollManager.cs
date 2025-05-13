@@ -168,5 +168,6 @@ public class ScrollManager : MonoBehaviour
         }
     }
 
-    
+
+    public List<GameObject> ActivePlatforms => activePlatforms;//젤리스포너사용을위한참조
 }
