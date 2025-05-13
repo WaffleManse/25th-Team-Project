@@ -38,7 +38,7 @@ public class DataCenter : ScriptableObject
 [Header("플레이어 최대점프 횟수")]
     [Tooltip("")]
     [SerializeField]
-    private int maxJumpCount =2 ;
+    private int maxJumpCount = 2;
     public int MaxJumpCount { get{ return maxJumpCount; } }
 
     //젤리 점수
