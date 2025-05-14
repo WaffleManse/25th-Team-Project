@@ -47,7 +47,7 @@ public class ScoreCount : MonoBehaviour
         }
 
         if (scoreText != null)
-            scoreText.text = "현재 점수: " + score.ToString(); //테스트용 txt에 문자열로 변환
+            scoreText.text = score.ToString(); //테스트용 txt에 문자열로 변환
 
         if (bestScoreText != null)
             bestScoreText.text = bestScore.ToString();
