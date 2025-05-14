@@ -192,7 +192,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2753bed67f38cc940b92eb76dc301e2a, type: 3}
-
 --- !u!1001 &746950705
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -259,7 +258,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c8063386b2c74446b95f934afd13746, type: 3}
-
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &838842392
@@ -332,9 +330,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 449784350199485172, guid: 02b2f533c9a7ef640ab38a6e9638ec02, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1991711290}
-    - targetCorrespondingSourceObject: {fileID: 4131936561316412606, guid: 02b2f533c9a7ef640ab38a6e9638ec02, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 770164397}
   m_SourcePrefab: {fileID: 100100000, guid: 02b2f533c9a7ef640ab38a6e9638ec02, type: 3}
 --- !u!1 &1174527141
 GameObject:
@@ -487,7 +482,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9251ef29ed0b341278e89a78ef96131c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 35f0345bce07647ac927afb5b0e28a98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -831,7 +826,7 @@ GameObject:
   - component: {fileID: 1351304757519924736}
   - component: {fileID: 1684769113554789660}
   m_Layer: 0
-  m_Name: ' DontDestroyOnlyUseRead'
+  m_Name: DontDestroyOnlyUseRead
   m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
