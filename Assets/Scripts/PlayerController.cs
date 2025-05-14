@@ -49,6 +49,12 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            // Jump 애니메이션 체크 
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Jumping_single") == false)
+            {
+                animator.SetBool("Jumping_single", true);
+            }
+
             if (!IsJump)
             {
                 IsJump = true;
@@ -61,11 +67,6 @@ public class Player : MonoBehaviour
                 JumpCount--;
             }
 
-            // Jump 애니메이션 체크 
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Jumping_single") == false)
-            {
-                animator.SetBool("Jumping_single", true);
-            }
         }
 
     }
