@@ -1,30 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ItemSpawner : MonoBehaviour
 {
-    public GameObject SpawnSpeed;
-    public GameObject SpawnItem;
-    public GameObject SpawnHeal;
-    public GameObject SpawnJelly;
+    [SerializeField] private GameObject jellyPrefab;
+    [SerializeField] private ScrollManager scrollManager;
+    [SerializeField] private Transform jellyParent;
+    [SerializeField] private float yOffset = 3f; // 플랫폼 위로 띄울 높이
 
-    void Start()
-    {
-        
-    }
+    private bool spawned = false;
 
     void Update()
     {
-        
+        if (!spawned && scrollManager.ActivePlatforms.Count > 0)
+        {
+            SpawnJellies();
+            spawned = true;
+        }
     }
 
-    // 정의해야할 것
-    // 업데이트에서
-    // 스폰위치 플랫폼의 위치의 y+2
-    // 8개 정도. 플랫폼마다 일정 간격으로 생성되기
-    // 장애물이 등장할시에
+    void SpawnJellies()
+    {
+        foreach (GameObject platform in scrollManager.ActivePlatforms)
+        {
+            float width = platform.GetComponent<SpriteRenderer>().bounds.size.x;
+            Vector3 start = platform.transform.position - new Vector3(width / 2f, 0, 0);
+            float gap = width / 8f;
 
-
-
+            for (int i = 0; i < 8; i++)
+            {
+                Vector3 jellyPos = start + new Vector3(gap * (i + 0.5f), yOffset, 0);
+                Instantiate(jellyPrefab, jellyPos, Quaternion.identity, jellyParent);
+            }
+        }
+    }
 }
