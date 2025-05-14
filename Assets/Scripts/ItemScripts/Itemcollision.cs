@@ -18,6 +18,7 @@ public abstract class Itemcollision : MonoBehaviour
     //public ReadScoreUI readScoreUI;
     protected virtual void Start() // 
     {
+        scoreCount = GameObject.Find("ScoreCount").GetComponent<ScoreCount>();
         bc = GetComponent<BoxCollider2D>();
         if (scoreCount != null)
         {

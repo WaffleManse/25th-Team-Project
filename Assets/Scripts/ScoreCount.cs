@@ -30,7 +30,9 @@ public class ScoreCount : MonoBehaviour
     {
         score += amount;
         Debug.Log("점수: " + score); // 테스트용 디버그로그
-        UpdateScoreUI();
+        scoreText.text = score.ToString(); //테스트용 txt에 문자열로 변환
+
+
     }
     void UpdateScoreUI()
     {
