@@ -59,10 +59,11 @@ public class ScrollManager : MonoBehaviour
         {
             //생성되는위치가 안겹치게 width만큼 계속 띄워주는거임 ㅇㅋ?그니까 맵이 안짤리고 계속 루프되는거임
             Vector3 pos = new Vector3(i * width, 0, 0);
-           
+
             //반복문 돌릴때마다 한개씩 생성할건데
             //여기서 우리의 옛날 기억을 떠올려야함
             //아니 1을 2로나누면 0.5고 애초에 나눌수가 없는데? 가아니라 못나누니까 그냥 나머지가 1로나옴 ㅇㅋ?
+            //Quaternion.identity 이거는 vector.zero 처럼 그냥 회전을 안한상태라는 뜻임
             GameObject bg = Instantiate(mapdataCenter.BackgroundPrefabs[i % mapdataCenter.BackgroundPrefabs.Count], pos, Quaternion.identity);
             activeBackgrounds.Add(bg);
         }

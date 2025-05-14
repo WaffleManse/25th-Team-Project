@@ -329,7 +329,7 @@ RectTransform:
   m_GameObject: {fileID: 559806491}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1.9875001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1506852170}
@@ -337,7 +337,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -142.4}
+  m_AnchoredPosition: {x: 0, y: -151.3}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &559806493
@@ -701,14 +701,14 @@ RectTransform:
   m_GameObject: {fileID: 738590405}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1.9499999, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1043371999}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -101}
+  m_AnchoredPosition: {x: 0, y: -91.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &738590407
@@ -1119,8 +1119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataCenter: {fileID: 0}
   score: 0
-  scoreText: {fileID: 712698349}
-  bestScoreText: {fileID: 920810770}
+  scoreText: {fileID: 0}
+  bestScoreText: {fileID: 0}
 --- !u!1 &1082486705
 GameObject:
   m_ObjectHideFlags: 0
