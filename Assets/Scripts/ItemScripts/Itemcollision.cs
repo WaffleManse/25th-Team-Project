@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,9 +15,10 @@ public abstract class Itemcollision : MonoBehaviour
     protected DataCenter dataCenter; // 자식 접근
 
     public ScoreCount scoreCount; // 스코어를 저장하는 장소
-
+    //public ReadScoreUI readScoreUI;
     protected virtual void Start() // 
     {
+        scoreCount = GameObject.Find("ScoreCount").GetComponent<ScoreCount>();
         bc = GetComponent<BoxCollider2D>();
         if (scoreCount != null)
         {
@@ -35,7 +37,7 @@ public abstract class Itemcollision : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Debug.Log("플레이어가 아이템 획득");
-            //scoreCount.AddScore(dataCenter.Jelly); //이거는 지우고 아이템의종류에서 판정해야할거같은데
+            scoreCount.AddScore(dataCenter.Jelly); //이거는 지우고 아이템의종류에서 판정해야할거같은데
             Destroy(gameObject);
 
         }
