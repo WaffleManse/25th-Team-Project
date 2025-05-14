@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
 
         // DataCenter에서 값 가져오기
         Speed = dataCenter.BasicSpeed;
@@ -77,9 +77,10 @@ public class Player : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.name.Equals("Ground"))
+        if (other.gameObject.CompareTag("Ground"))
         {
             IsJump = false;
+            animator.SetBool("Jumping_single", false);
         }
 
         if (JumpCount == 0)
