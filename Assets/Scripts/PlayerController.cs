@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     public bool GodMode = false; // 신 모드
     public bool IsDead = false; // 죽음 상태
 
-    private void Start()
+    void Start()
     {
         animator = GetComponent<Animator>();
 
@@ -62,9 +62,9 @@ public class Player : MonoBehaviour
             }
 
             // Jump 애니메이션 체크 
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Jumping-single") == false)
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Jumping_single") == false)
             {
-                animator.Play("Jumping-single", -1, 0);
+                animator.SetBool("Jumping_single", true);
             }
         }
 
