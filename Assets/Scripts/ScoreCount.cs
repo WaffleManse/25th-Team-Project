@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,8 +11,8 @@ public class ScoreCount : MonoBehaviour
     private DataCenter dataCenter;
     public int score = 0; // 점수 변수선언
     private int bestScore = 0;
-    public TMP_Text scoreText; // 점수표시 txt
-    public TMP_Text bestScoreText;
+    public Text scoreText; // 점수표시 txt
+    public Text bestScoreText;
 
     private void Awake()
     {
@@ -29,7 +30,9 @@ public class ScoreCount : MonoBehaviour
     {
         score += amount;
         Debug.Log("점수: " + score); // 테스트용 디버그로그
-        UpdateScoreUI();
+        scoreText.text = score.ToString(); //테스트용 txt에 문자열로 변환
+
+
     }
     void UpdateScoreUI()
     {
