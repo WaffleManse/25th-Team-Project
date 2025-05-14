@@ -2,16 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ScoreCount : MonoBehaviour
 {
     [SerializeField]
     private DataCenter dataCenter;
     public int score = 0; // 점수 변수선언
-    public Text scoreText; // 점수표시 txt
-    
+    private int bestScore = 0;
+    public TMP_Text scoreText; // 점수표시 txt
+    public TMP_Text bestScoreText;
+
+    private void Awake()
+    {
+        PlayerPrefs.SetInt("score", 50);
+
+    }
+
     void Start()
     {
+
         UpdateScoreUI(); // 아마도 UI초기화
     }
 
@@ -23,8 +33,29 @@ public class ScoreCount : MonoBehaviour
     }
     void UpdateScoreUI()
     {
+        score = PlayerPrefs.GetInt("score", 0);
+        bestScore = PlayerPrefs.GetInt("bestScore", 0);
+        Debug.Log("현재 점수 = " + score);
+        Debug.Log("최고 점수 = " + bestScore);
+
+        if (score > bestScore)
+        {
+            bestScore = score;
+            
+
+            PlayerPrefs.SetInt("bestScore", bestScore);
+        }
+
         if (scoreText != null)
             scoreText.text = "현재 점수: " + score.ToString(); //테스트용 txt에 문자열로 변환
+
+        if (bestScoreText != null)
+            bestScoreText.text = bestScore.ToString();
+
+        //bestScore = PlayerPrefs.GetInt(score, 50);
+
+
+
     }
 
 
